@@ -55,5 +55,9 @@ for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup { on_attach = on_attach }
 end
 EOF
+" Completion
+ let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
+ inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 " -------------------- LSP ----------------------------------------
 
