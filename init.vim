@@ -80,6 +80,7 @@
 " ----------------------  keyring   ----------------------------
 " -------------------- defalt  ----------------------------
 source ~/.config/nvim/plugin/sets.vim
+luafile ~/.config/nvim/lua/statusline/lua.lua
 
 call plug#begin('~/.config/nvim/plugged')
 " -------------------- Themes
@@ -89,6 +90,8 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend upda
 Plug 'vim-airline/vim-airline'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'joshdick/onedark.vim'
+Plug 'sainnhe/edge'
+"Plug 'bling/vim-airline'
 
 " -------------------- Function
 Plug 'preservim/nerdtree'
@@ -99,7 +102,7 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 "Plug 'kien/ctrlp.vim'                " super searching ctrl p
-
+Plug 'mhinz/vim-startify'
 " -------------------- sweet functions
 Plug 'yuttie/comfortable-motion.vim' " scrolling 'C-d' or 'C-u'
 "Plug 'KKPMW/vim-sendtowindow'        " send commands to REPL
@@ -184,9 +187,18 @@ source ~/.config/nvim/lsp/nvim-compe.vim
 luafile ~/.config/nvim/lsp/python-lsp.lua
 luafile ~/.config/nvim/lsp/tsserver-lsp.lua
 lua require'lspconfig'.clangd.setup{}
-lua require'lspconfig'.tsserver.setup{}
 lua require'lspconfig'.html.setup{}
+"lua << EOF
+"require'lspconfig'.html.setup {
+    "filetypes = {"html"},
+  "capabilities = capabilities,
+"}
+"EOF
 " crazy 
 
 " ******************** source file *****************************
 " **************************************************************
+
+
+
+"let g:node_host_prog = '/usr/local/bin/neovim-node-host'

@@ -10,7 +10,7 @@ inoremap kj <ESC>
 cnoremap kj <ESC> 
 inoremap jk <Esc>
 
-nnoremap <C-s> :w<CR>
+"nnoremap <C-s> :w<CR>
 
 augroup compileandrun
 autocmd filetype cpp nnoremap <f5> :w <bar> !g++ -std=c++11 % <cr> :vnew <bar> :te "./a.out" <cr><cr>

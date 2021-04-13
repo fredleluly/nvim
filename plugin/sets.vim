@@ -17,7 +17,7 @@ set colorcolumn=112
 set signcolumn=yes
 set encoding=UTF-8
 "personal
-"set cmdheight=2
+set cmdheight=2
 set formatoptions-=cro                  " Stop newline continution of comments
 set nobackup                            " This is recommended by coc
 set nowritebackup
