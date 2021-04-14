@@ -117,12 +117,12 @@ Plug 'yuttie/comfortable-motion.vim' " scrolling 'C-d' or 'C-u'
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'neoclide/coc-python', {'do': 'yarn install --frozen-lockfile'}
 " ini aja yang di aktifin
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 " default lsp from nvim
-Plug 'neovim/nvim-lspconfig'
-Plug 'nvim-lua/completion-nvim'
-Plug 'hrsh7th/nvim-compe'
+"Plug 'neovim/nvim-lspconfig'
+"Plug 'nvim-lua/completion-nvim'
+"Plug 'hrsh7th/nvim-compe'
 " if you want to active in line 174
 "Plug 'prabirshrestha/vim-lsp'
 "Plug 'Shougo/deoplete.nvim'
@@ -167,7 +167,7 @@ source $HOME/.config/nvim/plugin/telescope.vim
 " ******************** source file *****************************
 source ~/.config/nvim/plugin/sets.vim
 "luafile ~/.config/nvim/lua/statusline/lua.lua
-source $HOME/.config/nvim/plugin/.coc.vim
+"source $HOME/.config/nvim/plugin/.coc.vim
 " -------------------- pylint ----------------------------------------
 "source ~/.config/nvim/lsp/pyright.vim
 " -------------------- pylint ----------------------------------------
@@ -178,7 +178,7 @@ source $HOME/.config/nvim/plugin/.coc.vim
 " ~~~~~~~~~~~~~~~~~~~~~ compe completion ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 "luafile ~/.config/nvim/lua/lsp/python-lsp.lua
 "luafile ~/.config/nvim/lua/lsp/tsserver-lsp.lua
-"lua require'lspconfig'.clangd.setup{}
+lua require'lspconfig'.clangd.setup{}
 "lua require'lspconfig'.html.setup{}
 " crazy 
 "lua << EOF

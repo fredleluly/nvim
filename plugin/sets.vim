@@ -25,3 +25,4 @@ set pumheight=10                        " Makes popup menu smaller
 set clipboard=unnamedplus
 
 set showtabline=2
+set shortmess+=c

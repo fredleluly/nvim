@@ -39,7 +39,7 @@ local custom_attach = function(client)
     mapper("i", "<C-e>"    , "compe#close()",
         {silent = true, expr = true, noremap = true}
     )
-
+    -- make no sense
     -- LSP mappings (only apply when LSP client attached)
     lsp_mapper("n" , "K"         , "vim.lsp.buf.hover()")
     lsp_mapper("n" , "<c-]>"     , "vim.lsp.buf.definition()")
@@ -87,11 +87,11 @@ lspconfig.pyright.setup({
         }
     }
 })
+lspconfig.pyls.setup{on}
 
 -- typescript
 lspconfig.tsserver.setup{
   on_attach=function(client)
-    require("nvim-lsp-ts-utils").setup{}
     custom_attach(client)
   end
 }

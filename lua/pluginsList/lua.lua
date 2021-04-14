@@ -29,7 +29,8 @@ return require("packer").startup(
         --use "nvim-telescope/telescope-media-files.nvim"
         use "nvim-lua/popup.nvim"
         --use "karb94/neoscroll.nvim"
-
+        use { 'honza/vim-snippets' }
+        use { 'SirVer/ultisnips' }
         use "nekonako/xresources-nvim"
         
         use "joshdick/onedark.vim"
