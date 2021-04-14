@@ -79,20 +79,18 @@
 "  C-p to search file in project
 " ----------------------  keyring   ----------------------------
 " -------------------- defalt  ----------------------------
-source ~/.config/nvim/plugin/sets.vim
-luafile ~/.config/nvim/lua/statusline/lua.lua
 
 call plug#begin('~/.config/nvim/plugged')
 " -------------------- Themes
 Plug 'gruvbox-community/gruvbox'
 Plug 'dracula/vim', { 'commit': '147f389f4275cec4ef43ebc25e2011c57b45cc00' }
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
-Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'joshdick/onedark.vim'
 Plug 'sainnhe/edge'
 "Plug 'bling/vim-airline'
-
+"Plug 'akinsho/nvim-bufferline.lua'
 " -------------------- Function
 Plug 'preservim/nerdtree'
 Plug 'jiangmiao/auto-pairs'
@@ -119,7 +117,7 @@ Plug 'yuttie/comfortable-motion.vim' " scrolling 'C-d' or 'C-u'
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'neoclide/coc-python', {'do': 'yarn install --frozen-lockfile'}
 " ini aja yang di aktifin
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 " default lsp from nvim
 Plug 'neovim/nvim-lspconfig'
@@ -135,10 +133,7 @@ Plug 'hrsh7th/nvim-compe'
 call plug#end()
 " -------------------- config ----------------------------
 let g:python3_host_prog = expand('~/.config/nvim/env/bin/python')
-" -------------------- config ----------------------------
 
-
-" -------------------- linting ---------------------------
 " -------------------- linting ---------------------------
 
 " -------------------- setting plugin ----------------------------
@@ -153,48 +148,45 @@ lua require 'colorizer'.setup()
 " NERDCommenter
 nmap <C-_> <Plug>NERDCommenterToggle
 vmap <C-_> <Plug>NERDCommenterToggle<CR>gv
-" -------------------- setting plugin ----------------------------
 
 " -------------------- window ----------------------------
 source ~/.config/nvim/plugin/windows.vim
-" -------------------- window ----------------------------
 
 " -------------------- useful shortcut ----------------------------
 source ~/.config/nvim/plugin/shortcut.vim
-" -------------------- useful shortcut ----------------------------
 
 " -------------------- telescope  ---------------------------- 
-"telescope
 source $HOME/.config/nvim/plugin/telescope.vim
   "Using lua functions
  "nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
  "nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
  "nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
  "nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>"
-" -------------------- telescope  ---------------------------- 
 
 " **************************************************************
 " ******************** source file *****************************
-"source $HOME/.config/nvim/plug-config/coc.vim
+source ~/.config/nvim/plugin/sets.vim
+"luafile ~/.config/nvim/lua/statusline/lua.lua
+source $HOME/.config/nvim/plugin/.coc.vim
 " -------------------- pylint ----------------------------------------
-"source ~/.config/nvim/lua/pyright.vim
+"source ~/.config/nvim/lsp/pyright.vim
 " -------------------- pylint ----------------------------------------
 " crazy 
 " ~~~~~~~~~~~~~~~~~~~~~ compe completion ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-luafile ~/.config/nvim/lsp/compe-config.lua
-source ~/.config/nvim/lsp/nvim-compe.vim
+"luafile ~/.config/nvim/lua/lsp/compe-config.lua
+"source ~/.config/nvim/lua/lsp/nvim-compe.vim
 " ~~~~~~~~~~~~~~~~~~~~~ compe completion ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-luafile ~/.config/nvim/lsp/python-lsp.lua
-luafile ~/.config/nvim/lsp/tsserver-lsp.lua
-lua require'lspconfig'.clangd.setup{}
-lua require'lspconfig'.html.setup{}
+"luafile ~/.config/nvim/lua/lsp/python-lsp.lua
+"luafile ~/.config/nvim/lua/lsp/tsserver-lsp.lua
+"lua require'lspconfig'.clangd.setup{}
+"lua require'lspconfig'.html.setup{}
+" crazy 
 "lua << EOF
 "require'lspconfig'.html.setup {
     "filetypes = {"html"},
   "capabilities = capabilities,
 "}
 "EOF
-" crazy 
 
 " ******************** source file *****************************
 " **************************************************************

@@ -1,4 +1,4 @@
 " colorscheme
-colorscheme gruvbox
+" colorscheme gruvbox
 "let g:airline_theme='gruvbox'
 colorscheme edge
